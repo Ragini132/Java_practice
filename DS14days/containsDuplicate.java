@@ -2,7 +2,7 @@ class Solution {
     public boolean containsDuplicate(int[] nums) {
         int flag=0;
         HashMap<Integer,Integer> map1=new HashMap<Integer,Integer>();
-        
+        //
         for(int i=0;i<nums.length;i++){
             if(map1.containsKey(nums[i])){
                 flag=1;
