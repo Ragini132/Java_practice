@@ -1,24 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package javaapplication14;
+/* Read input from STDIN. Print your output to STDOUT*/
+
 import java.io.*;
 import java.util.*;
-/**
- *
- * @author sinha
- */
-public class JavaApplication14 {
+public class CandidateCode {
+   public static void main(String args[] ) throws Exception {
 
-    /**
-     * @param args the command line arguments
-     */
-    
-    public static void main(String[] args) {
-        // TODO code application logic here
-        //Write code here
+	//Write code here
 
    //input
    Scanner input=new Scanner(System.in);
@@ -36,11 +23,12 @@ public class JavaApplication14 {
       String str2=input.nextLine();
       str.add(str2);
    }
-   
    for(int k=0;k<num+1;k++){
-    //  System.out.println(str.get(k));
+     // System.out.println(str.get(k)+" "+k);
    } 
-   for(int i=0;i<num+1;i++){
+   
+   
+   for(int i=1;i<num+1;i++){
        int even=0;
       int odd=0;
       int dif=0;
@@ -49,7 +37,9 @@ public class JavaApplication14 {
 
       // characters array
       char[] char1=new char[str1.length()];
-
+      
+      
+   
       for(int j=0;j<str1.length();j++){
          char1[j]=str1.charAt(j);
          if(j%2==0){
@@ -63,30 +53,24 @@ public class JavaApplication14 {
       }
    //   System.out.println(odd+" "+even);
       dif=Math.abs(even-odd);
-   //   System.out.println(dif);
+     // System.out.println(dif);
       // check for prime string
-      if( dif%3!=0|| dif%5!=0|| dif%7!=0){
-         res.add("Casual String");
-      }
-      else{
+      if( dif%3==0|| dif%5==0|| dif%7==0){
          res.add("Prime String");
       }
+      else{
+         res.add("Casual String");
+      }
+      
    }
 
    // printing result
-   for(int k=0;k<num+1;k++){
+   
+   for(int k=0;k<num;k++){
       System.out.println(res.get(k));
    }
 
 
 
+   }
 }
-
-
-}
-
-
-
-  
-  
-
